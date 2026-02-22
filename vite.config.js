@@ -2,6 +2,7 @@ import react from '@vitejs/plugin-react'
 import path from 'path'
 import { resolve } from 'path'
 import { defineConfig } from 'vite'
+import { defineConfig } from 'vite'
 
 const buildPath = 'build'
 
@@ -9,6 +10,7 @@ export default defineConfig({
   base: '/',
   plugins: [react()],
   build: {
+    outDir: 'dist',
     target: 'esnext',
     outDir: resolve(__dirname, buildPath),
     assetsDir: 'assets',
